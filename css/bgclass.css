@@ -1,0 +1,150 @@
+:root {
+    --primary: #00B98E; /* สีเขียว */
+    --secondary: #FF6922; /* สีส้ม */
+    --light: #EFFDF5; /* สีพื้นหลังอ่อน */
+    --dark: #0E2E50; /* สีตัวอักษรเข้ม */
+}
+
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light); /* ใช้สีพื้นหลังอ่อน */
+    color: var(--dark); /* ใช้สีตัวอักษรเข้ม */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    min-height: 100vh; /* ทำให้สูงเต็มหน้าจอ */
+}
+
+.main-content {
+    max-width: 800px; /* ปรับขนาดให้หน้าแสดงกว้างขึ้น */
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white; /* พื้นหลังสีขาว */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* สไตล์สำหรับหัวข้อ */
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--primary); /* ใช้สีเขียว */
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: var(--primary); /* ใช้สีเขียว */
+}
+
+/* ฟอร์มสำหรับเพิ่มข้อมูล */
+form {
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: var(--primary); /* ใช้สีเขียว */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary); /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* ตารางแสดงข้อมูลคลาส */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table thead {
+    background-color: var(--primary); /* ใช้สีเขียว */
+    color: white;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--light); /* ใช้สีพื้นหลังอ่อน */
+}
+
+table tr:hover {
+    background-color: #f1f1f1; /* สีพื้นหลังเมื่อ hover */
+}
+
+table img {
+    border-radius: 4px;
+    object-fit: cover; /* จัดการให้ภาพไม่บิดเบี้ยว */
+}
+
+/* ปุ่มอัปเดต */
+.update-btn {
+    background-color: var(--primary); /* ใช้สีเขียว */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+    background-color: var(--secondary); /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* ปุ่มลบ */
+.delete-btn {
+    font-size: px;
+    float: right;
+    background-color: #C82333; /* สีแดงสำหรับปุ่มลบ */
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: darkred; /* สีแดงเข้มกว่าเมื่อ hover */
+}
+
+/* ปุ่มย้อนกลับ */
+.back-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: var(--primary); /* ใช้สีเขียว */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.back-btn:hover {
+    background-color: var(--secondary); /* เปลี่ยนสีเมื่อ hover */
+}

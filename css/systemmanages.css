@@ -1,0 +1,190 @@
+:root {
+    --primary: #00B98E;
+    --secondary: #FF6922;
+    --scondary2: #d1622f;
+    --light: #EFFDF5;
+    --dark: #0E2E50;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light); /* ใช้สีพื้นหลังอ่อน */
+    color: #333;
+}
+
+/* Container for sidebar and main content */
+.container {
+    display: flex;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: var(--scondary2);
+    padding: 20px;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+h3 {
+    background-color: var(--dark);
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.ol:hover {
+    background-color: var(--scondary2); /* สีเข้มขึ้นเมื่อชี้เมาส์ */
+    transform: translateY(-2px);
+}
+
+/* Main content styles */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
+    color: var(--primary);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Button styles */
+.submit-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #00987A;
+}
+
+/* Input styles */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+.logout {
+    text-align: center;
+    transform: translateY(-2px);
+    font-weight: bold; /* ตัวหนา */
+    background-color: #b90000;
+}
+
+.logout:hover {
+    background-color: #d91616; /* สีพื้นหลังเมื่อชี้เมาส์ */
+}
+
+.STAFF {
+    text-align: center;
+    font-weight: bold; /* ตัวหนา */
+    text-align: center; /* จัดข้อความตรงกลาง */
+}
+
+.btn, .add-btn, .e-btn {
+    display: inline-block; /* ทำให้สามารถกำหนดขนาดได้ */
+    padding: 10px 20px; /* เพิ่มระยะห่างภายใน */
+    color: white; /* สีข้อความ */
+    text-align: center; /* จัดข้อความตรงกลาง */
+    border: none; /* ไม่มีเส้นขอบ */
+    border-radius: 5px; /* ทำมุมให้มน */
+    text-decoration: none; /* ลบเส้นใต้ */
+    transition: background-color 0.3s; /* เพิ่มเอฟเฟกต์เปลี่ยนสี */
+}
+
+.add-btn {
+    background-color: var(--primary); /* ใช้สีหลักที่กำหนดไว้ */
+    color: white; /* สีตัวอักษร */
+    border: none; /* ไม่มีกรอบ */
+    border-radius: 5px; /* มุมมน */
+    padding: 10px 20px; /* ระยะห่างภายใน */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    cursor: pointer; /* แสดงว่ามีการคลิกได้ */
+    transition: background-color 0.3s, transform 0.3s; /* เอฟเฟกต์เมื่อโฮเวอร์ */
+}
+
+.add-btn:hover {
+    background-color: var(--secondary); /* เปลี่ยนสีเมื่อโฮเวอร์ */
+    transform: scale(1.05); /* ขยายขนาดเมื่อโฮเวอร์ */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+        padding: 15px;
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
+}

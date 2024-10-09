@@ -1,0 +1,137 @@
+:root {
+    --primary: #00B98E;   /* สีเขียวหลัก */
+    --secondary: #FF6922; /* สีส้มหลัก */
+    --light: #EFFDF5;     /* สีพื้นหลังอ่อน */
+    --dark: #0E2E50;      /* สีตัวอักษรเข้ม */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-box {
+    text-align: center;
+}
+
+.signup-box h2 {
+    color: var(--dark);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--dark);
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    position: relative; /* เพิ่มตำแหน่งเพื่อวาง toggle-password */
+}
+
+.input-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.input-group .toggle-password {
+    position: absolute; /* ตำแหน่งสัมพัทธ์ */
+    right: 10px; /* ชิดขวา */
+    top: 50%; /* จัดตำแหน่งแนวตั้ง */
+    transform: translateY(-50%); /* ทำให้ตรงกลาง */
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.input-group .toggle-password:hover {
+    color: #0056b3;
+}
+
+.input-group .toggle-password:active {
+    color: #003d7a;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.signup-btn:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.signup-box p {
+    margin-top: 20px;
+    color: var(--dark);
+}
+
+.back-btn {
+    width: 93%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--dark);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-btn:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+}
+.message-box {
+    padding: 10px; /* เพิ่มระยะห่างภายใน */
+    margin: 10px 0; /* เพิ่มระยะห่างด้านบนและล่าง */
+    border-radius: 5px; /* ทำมุมให้มน */
+    font-weight: bold; /* ตัวหนา */
+}
+
+.message-box.success {
+    background-color: #d4edda; /* สีพื้นหลังเขียวอ่อน */
+    color: #155724; /* สีข้อความเขียวเข้ม */
+    border: 1px solid #c3e6cb; /* เส้นขอบสีเขียว */
+}
+
+.message-box.error {
+    background-color: #f8d7da; /* สีพื้นหลังแดงอ่อน */
+    color: #721c24; /* สีข้อความแดงเข้ม */
+    border: 1px solid #f5c6cb; /* เส้นขอบสีแดง */
+}

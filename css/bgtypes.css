@@ -1,0 +1,166 @@
+:root {
+    --primary: #00B98E; /* สีเขียว */
+    --secondary: #FF6922; /* สีส้ม */
+    --light: #EFFDF5; /* สีพื้นหลังอ่อน */
+    --dark: #0E2E50; /* สีตัวอักษรเข้ม */
+    --bg-light: #f8f9fa; /* สีพื้นหลังสำหรับตาราง */
+    --bg-dark: #343a40; /* สีพื้นหลังเข้ม */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* ใช้ฟอนต์แบบ Sans-serif */
+    background-color: var(--light); /* สีพื้นหลัง */
+    color: var(--dark); /* สีตัวอักษร */
+    display: flex; /* ใช้ Flexbox */
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center; /* จัดกลางแนวตั้ง */
+    min-height: 100vh; /* ความสูงขั้นต่ำเต็มหน้าจอ */
+    margin: 0; /* ไม่มีระยะห่าง */
+    padding: 10px; /* เพิ่ม padding รอบข้างหน้าจอ */
+    box-sizing: border-box; /* คำนวณขนาดรวม padding และ border */
+}
+
+.main-content {
+    width: 100%; /* กำหนดความกว้างเต็มที่ */
+    max-width: 1200px; /* ความกว้างสูงสุดไม่เกิน 1200px */
+    background-color: white; /* สีพื้นหลังของเนื้อหา */
+    padding: 20px 25px; /* ขนาด Padding */
+    border-radius: 10px; /* ขอบมน */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* เงา */
+    text-align: center; /* จัดกลางข้อความ */
+    overflow-x: auto; /* ถ้ามีเนื้อหาเกินจะสามารถเลื่อนในแนวนอนได้ */
+    justify-content: center; /* จัดกึ่งกลางตาราง */
+    align-items: center; /* จัดกึ่งกลางตารางในแนวตั้ง */
+    flex-direction: column; /* ให้ตารางและเนื้อหาเรียงกันในแนวตั้ง */
+}
+
+h2, h3 {
+    color: var(--dark); /* สีของหัวเรื่อง */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    font-weight: bold; /* ทำให้หัวเรื่องตัวหนา */
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* ระยะห่างระหว่างฟิลด์ */
+    flex-wrap: wrap; /* ให้ฟิลด์ย่อขนาดตามหน้าจอ */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    width: 100%; /* ความกว้างของฟอร์มเต็มที่ */
+}
+
+input[type="text"] {
+    padding: 10px 15px; /* ขนาด padding */
+    border: 1px solid #ccc; /* ขอบ */
+    border-radius: 8px; /* ขอบมน */
+    width: calc(100% - 30px); /* ให้ขนาดฟิลด์เต็มที่ */
+    margin-right: 10px; /* ระยะห่างระหว่างฟิลด์ */
+    max-width: 300px; /* ความกว้างสูงสุดของฟิลด์ */
+    transition: border-color 0.3s ease; /* เพิ่มการเปลี่ยนสีขอบ */
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary); /* เปลี่ยนสีขอบเมื่อ Focus */
+}
+
+input[type="submit"],
+.button {
+    background-color: var(--primary); /* ปุ่มสีเขียว */
+    color: white; /* สีของตัวอักษร */
+    border: none; /* ไม่มีขอบ */
+    padding: 10px 20px; /* ขนาด padding */
+    border-radius: 8px; /* ขอบมน */
+    cursor: pointer; /* เปลี่ยนเมาส์เป็นมือเมื่อ hover */
+    transition: background-color 0.3s ease; /* เพิ่มเอฟเฟกต์เปลี่ยนสี */
+    font-size: 16px; /* ขนาดฟอนต์ */
+    margin-top: 10px; /* ระยะห่างด้านบน */
+}
+
+input[type="submit"],
+.button,
+.delete-button {
+    background-color: var(--primary); /* ปุ่มสีเขียว (สำหรับ update และปุ่มอื่นๆ) */
+    color: white; /* สีของตัวอักษร */
+    border: none; /* ไม่มีขอบ */
+    padding: 10px 20px; /* ขนาด padding */
+    border-radius: 8px; /* ขอบมน */
+    cursor: pointer; /* เปลี่ยนเมาส์เป็นมือเมื่อ hover */
+    transition: background-color 0.3s ease; /* เพิ่มเอฟเฟกต์เปลี่ยนสี */
+    font-size: 16px; /* ขนาดฟอนต์ */
+    margin-top: 10px; /* ระยะห่างด้านบน */
+    width: 120px; /* กำหนดความกว้างที่เท่ากัน */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+}
+
+.delete-button {
+    background-color: red;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+
+
+table {
+    width: 100%; /* ขยายเต็มพื้นที่ */
+    border-collapse: collapse; /* ไม่มีช่องว่างระหว่างขอบตาราง */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+    font-size: 16px; /* ขนาดฟอนต์ */
+    overflow-x: auto; /* เลื่อนในแนวนอนได้หากข้อมูลเกิน */
+}
+
+th, td {
+    padding: 12px 15px; /* ขนาด Padding */
+    text-align: left; /* จัดข้อความชิดซ้าย */
+    border-bottom: 1px solid #ddd; /* ขอบล่าง */
+}
+
+th {
+    background-color: var(--primary); /* สีพื้นหลังหัวตาราง */
+    color: white; /* สีของตัวอักษรในหัวตาราง */
+}
+
+td {
+    background-color: var(--bg-light); /* สีพื้นหลังของข้อมูล */
+}
+
+a {
+    color: var(--secondary); /* สีของลิงก์ */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+}
+
+
+
+.back-button,
+.update{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary); /* สีของปุ่มย้อนกลับ */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px; /* ขอบมน */
+    font-size: 16px; /* ขนาดฟอนต์ */
+}
+
+.back-button:hover,
+.add:hover {
+    background-color: var(--secondary); /* สีเมื่อ hover */
+}
+
+.update {
+    background-color: var(--primary); /* สีพื้นหลัง */
+    color: white; /* สีตัวอักษร */
+    border: none; /* ไม่มีขอบ */
+    padding: 10px 20px; /* ขนาด padding */
+    border-radius: 8px; /* ขอบมน */
+    cursor: pointer; /* เปลี่ยนเมาส์เป็นมือเมื่อ hover */
+    transition: background-color 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
+    font-size: 16px; /* ขนาดฟอนต์ */
+    margin-left: 10px; /* ระยะห่างจากปุ่มอื่น */
+}
+
+.update:hover {
+    background-color: var(--secondary); /* เปลี่ยนสีเมื่อ hover */
+}

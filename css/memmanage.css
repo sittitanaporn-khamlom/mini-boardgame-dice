@@ -1,0 +1,146 @@
+:root {
+    --primary: #00B98E; /* สีเขียว */
+    --secondary: #FF6922; /* สีส้ม */
+    --light: #EFFDF5; /* สีพื้นหลังอ่อน */
+    --dark: #0E2E50; /* สีตัวอักษรเข้ม */
+}
+
+/* memmanage.css */
+
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light); /* ใช้สีพื้นหลังอ่อน */
+    color: var(--dark); /* ใช้สีตัวอักษรเข้ม */
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white; /* พื้นหลังสีขาว */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* สไตล์สำหรับหัวข้อ */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary); /* ใช้สีเขียว */
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: var(--primary); /* ใช้สีเขียว */
+}
+
+.member-summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ตารางแสดงข้อมูลสมาชิก */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table thead {
+    background-color: var(--primary); /* ใช้สีเขียว */
+    color: white;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--light); /* ใช้สีพื้นหลังอ่อน */
+}
+
+table th {
+    background-color: var(--primary); /* ใช้สีเขียว */
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ปุ่ม */
+input[type="submit"] {
+    background-color: var(--primary); /* ใช้สีเขียว */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #008b74; /* สีเขียวเข้มสำหรับ hover */
+}
+
+/* ปุ่ม Delete */
+input[type="submit"][name="delete_mem"] {
+    background-color: var(--secondary); /* ใช้สีส้ม */
+}
+
+input[type="submit"][name="delete_mem"]:hover {
+    background-color: #e5531e; /* สีส้มเข้มสำหรับ hover */
+}
+
+/* ฟอร์มแก้ไขสมาชิก */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--dark); /* ใช้สีตัวอักษรเข้ม */
+}
+
+.form-group input[type="text"], .form-group input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ปุ่มย้อนกลับ */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: var(--primary); /* ใช้สีเขียว */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.back-button:hover {
+    background-color: #008b74; /* สีเขียวเข้มสำหรับ hover */
+}
+
+/* สไตล์สำหรับกราฟ */
+.chart-container {
+    margin-top: 30px;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}

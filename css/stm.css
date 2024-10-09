@@ -1,0 +1,106 @@
+:root {
+    --primary: #00B98E; /* สีเขียว */
+    --secondary: #FF6922; /* สีส้ม */
+    --light: #EFFDF5; /* สีพื้นหลังอ่อน */
+    --dark: #0E2E50; /* สีตัวอักษรเข้ม */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    margin: 0;
+    padding: 20px;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+}
+
+.add-btn,
+.delete-button,
+.back-button {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover,
+.delete-button:hover,
+.back-button:hover {
+    text-decoration: none;
+    background-color: var(--secondary);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid var(--dark);
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--primary);
+    color: white;
+}
+
+.delete-button {
+    background-color: red;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+.back-button {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+.change{
+    background-color: #ecbe24;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.change:hover{
+    background-color: var(--primary);
+    color: rgb(255, 255, 255);
+
+}

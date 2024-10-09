@@ -1,0 +1,166 @@
+/* ตั้งค่าตัวแปรสีหลัก */
+:root {
+    --primary: #00B98E;
+    --secondary: #FF6922;
+    --light: #EFFDF5;
+    --dark: #0E2E50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark); /* ใช้สีพื้นหลังเข้ม */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: var(--dark); /* พื้นหลังหลัก */
+}
+
+.login-box {
+    width: 50%;
+    padding: 50px;
+    background-color: var(--light); /* สีพื้นหลังแบบอ่อน */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h2 {
+    color: var(--dark);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 span.highlight {
+    color: var(--primary); /* ใช้สี primary สำหรับคำว่า "Boardgame Dice" */
+    font-weight: bold;
+}
+
+form {
+    width: 100%;
+    max-width: 300px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.options label {
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.forgot-password {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+/* ปุ่มแบ่งครึ่ง */
+.buttons {
+    width: 100%; /* ปรับให้เต็มความกว้าง */
+    display: flex;
+    flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
+    align-items: center; /* จัดกึ่งกลางในแนวแกน X */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+}
+
+.login-btn, .signup-btn {
+    width: 100%; /* ปรับความกว้างให้เต็ม */
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.login-btn {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างปุ่ม Login และ Sign up */
+}
+
+.signup-btn {
+    background-color: var(--light);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+}
+
+
+/* สำหรับส่วนของ Admin */
+.admin-link {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.admin-link p {
+    font-size: 0.9rem;
+    color: var(--dark);
+    cursor: pointer;
+}
+.admin-btn {
+    color: var(--dark);
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+}
+
+.admin-btn :hover{
+    color: var(--primary);
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+}
+
+/* สำหรับส่วนของภาพด้านขวา */
+.image-box {
+    width: 50%;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.input-group .toggle-password{
+    font-size: 16px;
+    color: #00B98E;
+}

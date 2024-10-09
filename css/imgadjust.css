@@ -1,0 +1,5 @@
+.imgadjust{
+    height: 550px;
+    width: 300px;
+    object-fit: cover;
+}

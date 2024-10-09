@@ -1,0 +1,104 @@
+/* profile.css */
+
+:root {
+    --primary: #00B98E; /* Primary Color */
+    --secondary: #FF6922; /* Secondary Color */
+    --light: #EFFDF5; /* Light Background Color */
+    --dark: #0E2E50; /* Dark Text Color */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    margin: 0;
+    padding: 20px;
+}
+
+.main-content {
+    max-width: 400px; /* ขนาดที่เล็กลง */
+    margin: auto; /* จัดกลาง */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary);
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 100px; /* ปรับขนาดรูปภาพ */
+    height: 100px; /* ปรับขนาดรูปภาพ */
+    border-radius: 50%; /* ทำให้รูปภาพกลม */
+    border: 2px solid var(--primary);
+}
+
+.user-info {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="file"], input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--dark);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: var(--primary);
+}
+
+/* Styling for the message */
+#message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    text-align: center;
+}
